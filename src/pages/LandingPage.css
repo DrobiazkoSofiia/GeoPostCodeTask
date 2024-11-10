@@ -1,0 +1,98 @@
+
+@keyframes backgroundMove {
+  0% {
+    background-position: top right;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
+.landing-container {
+  text-align: center;
+  padding: 20px;
+  background-image: url('../images/main_background.webp'); 
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  animation: backgroundMove 10s ease-in-out infinite alternate; 
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landing-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.option1, .option2, .option3, .option4 {
+  width: 400px;
+  height: 150px;
+  background-color: #E1EBFA;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 8px;
+  font-size: 1.7em;
+  font-weight: 600;
+  color: #0A3A6B;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-top: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards; 
+}
+
+
+.option1 {
+  background-image: url('../images/data_explorer.svg'); 
+  background-size: 100%; 
+  background-position: bottom right;
+  background-repeat: no-repeat; 
+  animation-delay: 0.2s;
+}
+
+.option2 {
+  background-image: url('../images/dowload_center.svg'); 
+  background-size: 30%; 
+  background-position: bottom right;
+  background-repeat: no-repeat; 
+  animation-delay: 0.4s;
+}
+
+.option3 {
+  background-image: url('../images/map_explorer.webp'); 
+  background-size: 60%; 
+  background-position: bottom right;
+  background-repeat: no-repeat; 
+  animation-delay: 0.6s;
+}
+
+.option4 {
+  background-image: url('../images/kb.svg'); 
+  background-size: 30%; 
+  background-position: bottom right;
+  background-repeat: no-repeat; 
+  animation-delay: 0.8s;
+}
+
+
+.option1:hover, .option2:hover, .option3:hover, .option4:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
